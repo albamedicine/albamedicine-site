@@ -1,0 +1,49 @@
+<!-- FILE: products.html -->
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>製品 | アルバメディスン合同会社</title>
+  <meta name="description" content="Muse細胞の同定・分離に用いる抗SSEA-3抗体のご案内。" />
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-slate-50 text-slate-800">
+  <header class="relative z-50">
+    <div class="absolute inset-0 -z-10">
+      <img src="https://source.unsplash.com/1600x200/?antibody,science" alt="Products Header" class="w-full h-full object-cover">
+      <div class="absolute inset-0 bg-slate-900/40"></div>
+    </div>
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between text-white">
+      <a href="/" class="font-semibold tracking-wide">アルバメディスン合同会社</a>
+      <nav class="hidden md:flex gap-6 text-sm">
+        <a href="/products.html" class="text-blue-200 font-semibold">製品</a>
+        <a href="/about.html" class="hover:text-blue-200">会社情報</a>
+        <a href="/contact.html" class="hover:text-blue-200">お問い合わせ</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="py-16">
+    <div class="mx-auto max-w-5xl px-4">
+      <h1 class="text-3xl font-bold">製品</h1>
+      <p class="mt-4 text-slate-700">Muse細胞を同定・単離するための抗SSEA-3抗体。ロット情報、使用例、希釈条件などの技術資料はお問い合わせください。</p>
+      <ul class="mt-6 text-sm text-slate-700 list-disc list-inside">
+        <li>対象抗原: SSEA-3（Stage-Specific Embryonic Antigen-3）</li>
+        <li>用途: FACS / 免疫染色（IF）/ 免疫蛍光</li>
+        <li>用途例: Muse細胞の同定・分離</li>
+      </ul>
+      <div class="mt-8 space-y-4">
+        <a href="/contact.html" class="bg-blue-700 text-white px-4 py-2 rounded">技術資料を問い合わせる</a>
+        <p class="text-slate-700 text-sm">※ ご注文は現在メールで受け付けております。下記メールアドレスまでご連絡ください。<br>
+        <a href="mailto:y-kuroda@albamedicine.com" class="text-blue-700 underline">y-kuroda@albamedicine.com</a></p>
+      </div>
+    </div>
+  </main>
+
+  <footer class="py-10 text-center text-sm text-slate-500">
+    © <span id="yearP"></span> アルバメディスン合同会社
+  </footer>
+  <script>document.getElementById('yearP').textContent = new Date().getFullYear();</script>
+</body>
+</html>

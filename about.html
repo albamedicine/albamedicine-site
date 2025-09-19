@@ -1,0 +1,43 @@
+<!-- FILE: about.html -->
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>会社情報 | アルバメディスン合同会社</title>
+  <meta name="description" content="アルバメディスン合同会社の会社概要。" />
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-slate-50 text-slate-800">
+  <header class="relative z-50">
+    <div class="absolute inset-0 -z-10">
+      <img src="https://source.unsplash.com/1600x200/?office,building" alt="About Header" class="w-full h-full object-cover">
+      <div class="absolute inset-0 bg-slate-900/40"></div>
+    </div>
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between text-white">
+      <a href="/" class="font-semibold tracking-wide">アルバメディスン合同会社</a>
+      <nav class="hidden md:flex gap-6 text-sm">
+        <a href="/products.html" class="hover:text-blue-200">製品</a>
+        <a href="/about.html" class="text-blue-200 font-semibold">会社情報</a>
+        <a href="/contact.html" class="hover:text-blue-200">お問い合わせ</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="py-16">
+    <div class="mx-auto max-w-5xl px-4">
+      <h1 class="text-3xl font-bold">会社情報</h1>
+      <ul class="mt-4 text-sm text-slate-700 space-y-2">
+        <li><strong>会社名:</strong> アルバメディスン合同会社 / Alba Medicine LLC</li>
+        <li><strong>所在地:</strong> 〒980-8575 宮城県仙台市青葉区星陵町2-1 5号館 6F</li>
+        <li><strong>Email:</strong> <a href="mailto:y-kuroda@albamedicine.com" class="text-blue-700 underline">y-kuroda@albamedicine.com</a></li>
+      </ul>
+    </div>
+  </main>
+
+  <footer class="py-10 text-center text-sm text-slate-500">
+    © <span id="yearA"></span> アルバメディスン合同会社
+  </footer>
+  <script>document.getElementById('yearA').textContent = new Date().getFullYear();</script>
+</body>
+</html>
