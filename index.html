@@ -22,13 +22,18 @@
 
     <!-- モバイル用メニューボタン（常に見える濃い色） -->
     <button id="menuBtn"
-      class="md:hidden inline-flex items-center justify-center rounded p-2 text-slate-900 hover:bg-slate-100 focus:outline-none focus:ring-2 focus:ring-slate-300"
-      aria-controls="mobileMenu" aria-expanded="false">
-      <span class="sr-only">メニューを開閉</span>
-      <svg viewBox="0 0 24 24" fill="currentColor" class="w-7 h-7" aria-hidden="true">
-        <path d="M3 6h18M3 12h18M3 18h18"/>
-      </svg>
-    </button>
+  class="md:hidden inline-flex items-center justify-center rounded p-2 text-slate-900 hover:bg-slate-100 focus:outline-none focus:ring-2 focus:ring-slate-300"
+  aria-controls="mobileMenu" aria-expanded="false">
+  <span class="sr-only">メニュー</span>
+  <svg viewBox="0 0 24 24" class="w-7 h-7" aria-hidden="true">
+    <path d="M3 6h18M3 12h18M3 18h18"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"/>
+  </svg>
+</button>
+
   </div>
 
   <!-- モバイルメニュー（md未満で表示切替） -->
