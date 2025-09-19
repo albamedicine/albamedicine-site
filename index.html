@@ -11,21 +11,26 @@
 <body class="bg-slate-50 text-slate-800">
 <header class="relative z-50">
   <div class="absolute inset-0 -z-10">
-    <div class="absolute inset-0 bg-slate-900/40"></div>
+    <!-- ここは背景画像などがあればそのままでOK。無い場合は透明のまま -->
+    <div class="absolute inset-0 bg-slate-900/40 md:block hidden"></div>
+    <!-- ↑ オーバーレイはPC(=md以上)でのみ適用。小画面では消して明るい背景に -->
   </div>
 
-  <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between text-white">
+  <!-- ★ 小画面は濃い文字色、PCは白文字に切り替え -->
+  <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between text-slate-900 md:text-white">
     <a href="index.html" class="font-semibold tracking-wide">アルバメディスン合同会社</a>
 
-    <!-- PCナビ -->
+    <!-- PCナビ（md以上で表示） -->
     <nav class="hidden md:flex gap-6 text-sm">
       <a href="products.html" class="hover:text-blue-200">製品</a>
       <a href="about.html" class="hover:text-blue-200">会社情報</a>
       <a href="contact.html" class="hover:text-blue-200">お問い合わせ</a>
     </nav>
 
-    <!-- モバイル用メニューボタン -->
-    <button id="menuBtn" class="md:hidden inline-flex items-center justify-center rounded p-2 text-white/90 hover:text-white hover:bg-white/10 focus:outline-none focus:ring-2 focus:ring-white/30" aria-controls="mobileMenu" aria-expanded="false">
+    <!-- モバイル用メニューボタン（小画面で見える色に） -->
+    <button id="menuBtn"
+      class="md:hidden inline-flex items-center justify-center rounded p-2 text-slate-900 md:text-white hover:bg-black/5 md:hover:bg-white/10 focus:outline-none focus:ring-2 focus:ring-black/20 md:focus:ring-white/30"
+      aria-controls="mobileMenu" aria-expanded="false">
       <span class="sr-only">メニューを開閉</span>
       <svg viewBox="0 0 24 24" fill="currentColor" class="w-7 h-7"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
     </button>
@@ -33,10 +38,11 @@
 
   <!-- モバイルメニュー -->
   <div id="mobileMenu" class="md:hidden hidden px-4 pb-4">
-    <div class="mt-2 bg-slate-900/90 text-white rounded-lg ring-1 ring-white/10 shadow-lg">
-      <a href="products.html" class="block px-4 py-3 hover:bg-white/10 rounded-t-lg">製品</a>
-      <a href="about.html" class="block px-4 py-3 hover:bg-white/10">会社情報</a>
-      <a href="contact.html" class="block px-4 py-3 hover:bg-white/10 rounded-b-lg">お問い合わせ</a>
+    <!-- 小画面では明るい背景に黒文字で視認性アップ -->
+    <div class="mt-2 bg-white text-slate-900 rounded-lg ring-1 ring-slate-200 shadow-lg">
+      <a href="products.html" class="block px-4 py-3 hover:bg-slate-50 rounded-t-lg">製品</a>
+      <a href="about.html" class="block px-4 py-3 hover:bg-slate-50">会社情報</a>
+      <a href="contact.html" class="block px-4 py-3 hover:bg-slate-50 rounded-b-lg">お問い合わせ</a>
     </div>
   </div>
 </header>
@@ -91,6 +97,8 @@
 
 <script>
 document.getElementById('year').textContent = new Date().getFullYear();
+
+// ハンバーガー開閉
 const menuBtn = document.getElementById('menuBtn');
 const mobileMenu = document.getElementById('mobileMenu');
 if (menuBtn && mobileMenu) {
@@ -98,6 +106,11 @@ if (menuBtn && mobileMenu) {
     mobileMenu.classList.toggle('hidden');
     menuBtn.setAttribute('aria-expanded', (!mobileMenu.classList.contains('hidden')).toString());
   });
+  // モバイルメニュー内リンクを押したら閉じる
+  mobileMenu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+    mobileMenu.classList.add('hidden');
+    menuBtn.setAttribute('aria-expanded', 'false');
+  }));
 }
 </script>
 </body>
