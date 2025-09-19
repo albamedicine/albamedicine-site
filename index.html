@@ -9,63 +9,37 @@
 <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body class="bg-slate-50 text-slate-800">
-<header class="sticky top-0 z-50 bg-white text-slate-900">
-  <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+<header class="relative z-50">
+  <div class="absolute inset-0 -z-10">
+    <div class="absolute inset-0 bg-slate-900/40"></div>
+  </div>
+
+  <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between text-white">
     <a href="index.html" class="font-semibold tracking-wide">アルバメディスン合同会社</a>
 
-    <!-- PCナビ（md以上で表示） -->
+    <!-- PCナビ -->
     <nav class="hidden md:flex gap-6 text-sm">
-      <a href="products.html" class="hover:text-blue-700">製品</a>
-      <a href="about.html" class="hover:text-blue-700">会社情報</a>
-      <a href="contact.html" class="hover:text-blue-700">お問い合わせ</a>
+      <a href="products.html" class="hover:text-blue-200">製品</a>
+      <a href="about.html" class="hover:text-blue-200">会社情報</a>
+      <a href="contact.html" class="hover:text-blue-200">お問い合わせ</a>
     </nav>
 
-    <!-- モバイル用メニューボタン（常に見える濃い色） -->
-    <button id="menuBtn"
-  class="md:hidden inline-flex items-center justify-center rounded p-2 text-slate-900 hover:bg-slate-100 focus:outline-none focus:ring-2 focus:ring-slate-300"
-  aria-controls="mobileMenu" aria-expanded="false">
-  <span class="sr-only">メニュー</span>
-  <svg viewBox="0 0 24 24" class="w-7 h-7" aria-hidden="true">
-    <path d="M3 6h18M3 12h18M3 18h18"
-          fill="none"
-          stroke="currentColor"
-          stroke-width="2"
-          stroke-linecap="round"/>
-  </svg>
-</button>
-
+    <!-- モバイル用メニューボタン -->
+    <button id="menuBtn" class="md:hidden inline-flex items-center justify-center rounded p-2 text-white/90 hover:text-white hover:bg-white/10 focus:outline-none focus:ring-2 focus:ring-white/30" aria-controls="mobileMenu" aria-expanded="false">
+      <span class="sr-only">メニューを開閉</span>
+      <svg viewBox="0 0 24 24" fill="currentColor" class="w-7 h-7"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+    </button>
   </div>
 
-  <!-- モバイルメニュー（md未満で表示切替） -->
-  <div id="mobileMenu" class="md:hidden hidden border-t border-slate-200">
-    <nav class="px-4 py-2 flex flex-col bg-white text-slate-900">
-      <a href="products.html" class="px-2 py-3 rounded hover:bg-slate-100">製品</a>
-      <a href="about.html" class="px-2 py-3 rounded hover:bg-slate-100">会社情報</a>
-      <a href="contact.html" class="px-2 py-3 rounded hover:bg-slate-100">お問い合わせ</a>
-    </nav>
+  <!-- モバイルメニュー -->
+  <div id="mobileMenu" class="md:hidden hidden px-4 pb-4">
+    <div class="mt-2 bg-slate-900/90 text-white rounded-lg ring-1 ring-white/10 shadow-lg">
+      <a href="products.html" class="block px-4 py-3 hover:bg-white/10 rounded-t-lg">製品</a>
+      <a href="about.html" class="block px-4 py-3 hover:bg-white/10">会社情報</a>
+      <a href="contact.html" class="block px-4 py-3 hover:bg-white/10 rounded-b-lg">お問い合わせ</a>
+    </div>
   </div>
-
-  <script>
-    // ハンバーガー開閉（早期実行OK）
-    (function() {
-      var menuBtn = document.getElementById('menuBtn');
-      var mobileMenu = document.getElementById('mobileMenu');
-      if (!menuBtn || !mobileMenu) return;
-      menuBtn.addEventListener('click', function() {
-        mobileMenu.classList.toggle('hidden');
-        menuBtn.setAttribute('aria-expanded', (!mobileMenu.classList.contains('hidden')).toString());
-      });
-      // メニュー内リンクで自動クローズ
-      mobileMenu.querySelectorAll('a').forEach(function(a) {
-        a.addEventListener('click', function() {
-          mobileMenu.classList.add('hidden');
-          menuBtn.setAttribute('aria-expanded', 'false');
-        });
-      });
-    })();
-  </script>
 </header>
-
 
 <main>
   <section class="py-16 bg-slate-100">
@@ -117,8 +91,6 @@
 
 <script>
 document.getElementById('year').textContent = new Date().getFullYear();
-
-// ハンバーガー開閉
 const menuBtn = document.getElementById('menuBtn');
 const mobileMenu = document.getElementById('mobileMenu');
 if (menuBtn && mobileMenu) {
@@ -126,11 +98,6 @@ if (menuBtn && mobileMenu) {
     mobileMenu.classList.toggle('hidden');
     menuBtn.setAttribute('aria-expanded', (!mobileMenu.classList.contains('hidden')).toString());
   });
-  // モバイルメニュー内リンクを押したら閉じる
-  mobileMenu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
-    mobileMenu.classList.add('hidden');
-    menuBtn.setAttribute('aria-expanded', 'false');
-  }));
 }
 </script>
 </body>
