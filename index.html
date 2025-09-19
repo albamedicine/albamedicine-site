@@ -11,12 +11,7 @@
 <body class="bg-slate-50 text-slate-800">
 <header class="relative z-50">
   <div class="absolute inset-0 -z-10">
-    <img src="https://source.unsplash.com/1600x200/?laboratory,science"
-         alt="Header Background"
-         class="w-full h-full object-cover"
-         referrerpolicy="no-referrer"
-         loading="lazy"
-         onerror="this.onerror=null;this.src='https://picsum.photos/1600/200';">
+    <img src="images/header-index.jpg" alt="Header Background" class="w-full h-full object-cover">
     <div class="absolute inset-0 bg-slate-900/40"></div>
   </div>
   <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between text-white">
@@ -41,15 +36,22 @@
         <a href="contact.html" class="border border-slate-300 px-4 py-2 rounded">お問い合わせ</a>
       </div>
 
-      <!-- 画像（フォールバック付き） -->
-      <div class="mt-8">
-        <img src="https://source.unsplash.com/1000x625/?cells,laboratory"
-             alt="研究風景"
-             class="rounded shadow-lg mx-auto w-full max-w-3xl aspect-[16/10] object-cover"
-             referrerpolicy="no-referrer"
-             loading="lazy"
-             onerror="this.onerror=null;this.src='https://picsum.photos/1000/625';">
+      <!-- ギャラリー表示 -->
+      <div class="mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div>
+          <img src="images/culture.jpg" alt="細胞培養イメージ" 
+               class="rounded-lg shadow-md w-full h-64 object-cover">
+        </div>
+        <div>
+          <img src="images/dish.jpg" alt="培養ディッシュ" 
+               class="rounded-lg shadow-md w-full h-64 object-cover">
+        </div>
+        <div>
+          <img src="images/cells.jpg" alt="細胞顕微鏡写真" 
+               class="rounded-lg shadow-md w-full h-64 object-cover">
+        </div>
       </div>
+
     </div>
   </section>
 
