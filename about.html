@@ -13,13 +13,31 @@
   <div class="absolute inset-0 -z-10">
     <div class="absolute inset-0 bg-slate-900/40"></div>
   </div>
+
   <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between text-white">
     <a href="index.html" class="font-semibold tracking-wide">アルバメディスン合同会社</a>
+
+    <!-- PCナビ（このページを強調） -->
     <nav class="hidden md:flex gap-6 text-sm">
       <a href="products.html" class="hover:text-blue-200">製品</a>
       <a href="about.html" class="text-blue-200 font-semibold">会社情報</a>
       <a href="contact.html" class="hover:text-blue-200">お問い合わせ</a>
     </nav>
+
+    <!-- モバイル用メニューボタン -->
+    <button id="menuBtn" class="md:hidden inline-flex items-center justify-center rounded p-2 text-white/90 hover:text-white hover:bg-white/10 focus:outline-none focus:ring-2 focus:ring-white/30" aria-controls="mobileMenu" aria-expanded="false">
+      <span class="sr-only">メニューを開閉</span>
+      <svg viewBox="0 0 24 24" fill="currentColor" class="w-7 h-7"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+    </button>
+  </div>
+
+  <!-- モバイルメニュー -->
+  <div id="mobileMenu" class="md:hidden hidden px-4 pb-4">
+    <div class="mt-2 bg-slate-900/90 text-white rounded-lg ring-1 ring-white/10 shadow-lg">
+      <a href="products.html" class="block px-4 py-3 hover:bg-white/10 rounded-t-lg">製品</a>
+      <a href="about.html" class="block px-4 py-3 hover:bg-white/10 font-semibold text-blue-200">会社情報</a>
+      <a href="contact.html" class="block px-4 py-3 hover:bg白/10 rounded-b-lg">お問い合わせ</a>
+    </div>
   </div>
 </header>
 
@@ -32,10 +50,9 @@
       <li><strong>Email:</strong> <a href="mailto:y-kuroda@albamedicine.com" class="text-blue-700 underline">y-kuroda@albamedicine.com</a></li>
     </ul>
 
-    <!-- 差し替え：Googleマップ埋め込み（レスポンシブ） -->
+    <!-- 地図（現状の埋め込みを維持） -->
     <div class="mt-10">
       <div class="relative w-full overflow-hidden rounded-lg shadow">
-        <!-- 16:9 アスペクト比ボックス -->
         <div class="pt-[56.25%]"></div>
         <iframe
           class="absolute inset-0 w-full h-full border-0"
@@ -61,6 +78,17 @@
 <footer class="py-10 text-center text-sm text-slate-500">
   © <span id="yearA"></span> アルバメディスン合同会社
 </footer>
-<script>document.getElementById('yearA').textContent = new Date().getFullYear();</script>
+
+<script>
+document.getElementById('yearA').textContent = new Date().getFullYear();
+const menuBtn = document.getElementById('menuBtn');
+const mobileMenu = document.getElementById('mobileMenu');
+if (menuBtn && mobileMenu) {
+  menuBtn.addEventListener('click', () => {
+    mobileMenu.classList.toggle('hidden');
+    menuBtn.setAttribute('aria-expanded', (!mobileMenu.classList.contains('hidden')).toString());
+  });
+}
+</script>
 </body>
 </html>

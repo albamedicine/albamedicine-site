@@ -10,33 +10,59 @@
 </head>
 <body class="bg-slate-50 text-slate-800">
 <header class="relative z-50">
-<div class="absolute inset-0 -z-10">
-<div class="absolute inset-0 bg-slate-900/40"></div>
-</div>
-<div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between text-white">
-<a href="index.html" class="font-semibold tracking-wide">アルバメディスン合同会社</a>
-<nav class="hidden md:flex gap-6 text-sm">
-<a href="products.html" class="hover:text-blue-200">製品</a>
-<a href="about.html" class="hover:text-blue-200">会社情報</a>
-<a href="contact.html" class="text-blue-200 font-semibold">お問い合わせ</a>
-</nav>
-</div>
+  <div class="absolute inset-0 -z-10">
+    <div class="absolute inset-0 bg-slate-900/40"></div>
+  </div>
+
+  <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between text-white">
+    <a href="index.html" class="font-semibold tracking-wide">アルバメディスン合同会社</a>
+
+    <!-- PCナビ（このページを強調） -->
+    <nav class="hidden md:flex gap-6 text-sm">
+      <a href="products.html" class="hover:text-blue-200">製品</a>
+      <a href="about.html" class="hover:text-blue-200">会社情報</a>
+      <a href="contact.html" class="text-blue-200 font-semibold">お問い合わせ</a>
+    </nav>
+
+    <!-- モバイル用メニューボタン -->
+    <button id="menuBtn" class="md:hidden inline-flex items-center justify-center rounded p-2 text-white/90 hover:text-white hover:bg-white/10 focus:outline-none focus:ring-2 focus:ring-white/30" aria-controls="mobileMenu" aria-expanded="false">
+      <span class="sr-only">メニューを開閉</span>
+      <svg viewBox="0 0 24 24" fill="currentColor" class="w-7 h-7"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+    </button>
+  </div>
+
+  <!-- モバイルメニュー -->
+  <div id="mobileMenu" class="md:hidden hidden px-4 pb-4">
+    <div class="mt-2 bg-slate-900/90 text-white rounded-lg ring-1 ring-white/10 shadow-lg">
+      <a href="products.html" class="block px-4 py-3 hover:bg-white/10 rounded-t-lg">製品</a>
+      <a href="about.html" class="block px-4 py-3 hover:bg-white/10">会社情報</a>
+      <a href="contact.html" class="block px-4 py-3 hover:bg-white/10 rounded-b-lg font-semibold text-blue-200">お問い合わせ</a>
+    </div>
+  </div>
 </header>
 
-
 <main class="py-16">
-<div class="mx-auto max-w-5xl px-4 text-left">
-<h1 class="text-3xl font-bold">お問い合わせ</h1>
-<p class="mt-2 text-slate-700">お問い合わせは下記メールアドレスへお願いいたします。</p>
-<a href="mailto:y-kuroda@albamedicine.com" class="mt-6 inline-block bg-blue-700 text-white px-6 py-3 rounded">y-kuroda@albamedicine.com</a>
-
-</div>
+  <div class="mx-auto max-w-5xl px-4 text-left">
+    <h1 class="text-3xl font-bold">お問い合わせ</h1>
+    <p class="mt-2 text-slate-700">お問い合わせは下記メールアドレスへお願いいたします。</p>
+    <a href="mailto:y-kuroda@albamedicine.com" class="mt-6 inline-block bg-blue-700 text-white px-6 py-3 rounded">y-kuroda@albamedicine.com</a>
+  </div>
 </main>
 
-
 <footer class="py-10 text-center text-sm text-slate-500">
-© <span id="yearC"></span> アルバメディスン合同会社
+  © <span id="yearC"></span> アルバメディスン合同会社
 </footer>
-<script>document.getElementById('yearC').textContent = new Date().getFullYear();</script>
+
+<script>
+document.getElementById('yearC').textContent = new Date().getFullYear();
+const menuBtn = document.getElementById('menuBtn');
+const mobileMenu = document.getElementById('mobileMenu');
+if (menuBtn && mobileMenu) {
+  menuBtn.addEventListener('click', () => {
+    mobileMenu.classList.toggle('hidden');
+    menuBtn.setAttribute('aria-expanded', (!mobileMenu.classList.contains('hidden')).toString());
+  });
+}
+</script>
 </body>
 </html>
