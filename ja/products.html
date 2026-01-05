@@ -1,25 +1,24 @@
 <!doctype html>
-<html lang="en" class="scroll-smooth">
+<html lang="ja" class="scroll-smooth">
 
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Products | Alba Medicine LLC</title>
-  <meta name="description"
-    content="Product details and purchasing information for Anti-SSEA-3 Antibody, essential for Muse cell identification and isolation." />
+  <title>製品情報 | アルバメディスン合同会社</title>
+  <meta name="description" content="Muse細胞の同定・分離に不可欠な抗SSEA-3抗体の製品詳細・ご購入はこちら。" />
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Noto+Sans+JP:wght@400;500;700&display=swap');
 
     body {
-      font-family: 'Inter', sans-serif;
+      font-family: 'Inter', 'Noto Sans JP', sans-serif;
     }
   </style>
 </head>
 
 <body class="bg-slate-50 text-slate-800 antialiased flex flex-col min-h-screen">
 
-  <!-- Header -->
+  <!-- Header (Consistent) -->
   <header id="header" class="fixed w-full z-50 transition-all duration-300 bg-slate-900/90 backdrop-blur-md shadow-lg">
     <div class="mx-auto max-w-7xl px-6 lg:px-8">
       <div class="flex h-20 items-center justify-between">
@@ -29,13 +28,11 @@
           </span>
         </a>
         <nav class="hidden md:flex gap-8">
-          <a href="index.html" class="text-sm font-medium text-slate-300 hover:text-white transition-colors">Home</a>
-          <a href="products.html"
-            class="text-sm font-medium text-white hover:text-blue-400 transition-colors">Products</a>
-          <a href="about.html" class="text-sm font-medium text-slate-300 hover:text-white transition-colors">About
-            Us</a>
+          <a href="index.html" class="text-sm font-medium text-slate-300 hover:text-white transition-colors">ホーム</a>
+          <a href="products.html" class="text-sm font-medium text-white hover:text-blue-400 transition-colors">製品情報</a>
+          <a href="about.html" class="text-sm font-medium text-slate-300 hover:text-white transition-colors">会社概要</a>
           <a href="contact.html"
-            class="text-sm font-medium text-slate-300 hover:text-white transition-colors">Contact</a>
+            class="text-sm font-medium text-slate-300 hover:text-white transition-colors">お問い合わせ</a>
         </nav>
         <div class="flex items-center gap-4">
           <!-- Language Switcher -->
@@ -48,17 +45,17 @@
             </button>
             <div class="absolute right-0 top-full w-40 pt-2 origin-top-right hidden group-hover:block">
               <div class="rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none px-1 py-1">
+                <a href="../products.html"
+                  class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-md">English</a>
                 <a href="products.html"
-                  class="block px-4 py-2 text-sm text-blue-600 font-bold bg-blue-50 rounded-md">English</a>
-                <a href="ja/products.html"
-                  class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-md">日本語</a>
+                  class="block px-4 py-2 text-sm text-blue-600 font-bold bg-blue-50 rounded-md">日本語</a>
               </div>
             </div>
           </div>
 
           <a href="products.html"
             class="hidden md:inline-flex items-center justify-center rounded-full bg-blue-600 px-5 py-2 text-sm font-semibold text-white shadow-sm hover:bg-blue-500 transition-all">
-            View Products
+            製品を見る
           </a>
           <button id="menuBtn" class="md:hidden p-2 text-slate-300 hover:text-white">
             <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
@@ -71,14 +68,13 @@
     <div id="mobileMenu" class="hidden md:hidden bg-slate-900 border-t border-slate-800">
       <div class="space-y-1 px-4 py-6">
         <a href="index.html"
-          class="block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-white hover:bg-slate-800">Home</a>
+          class="block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-slate-300 hover:bg-slate-800 hover:text-white">ホーム</a>
         <a href="products.html"
-          class="block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-slate-300 hover:bg-slate-800">Products</a>
+          class="block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-white hover:bg-slate-800">製品情報</a>
         <a href="about.html"
-          class="block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-slate-300 hover:bg-slate-800 hover:text-white">About
-          Us</a>
+          class="block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-slate-300 hover:bg-slate-800 hover:text-white">会社概要</a>
         <a href="contact.html"
-          class="block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-slate-300 hover:bg-slate-800 hover:text-white">Contact</a>
+          class="block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-slate-300 hover:bg-slate-800 hover:text-white">お問い合わせ</a>
       </div>
     </div>
   </header>
@@ -92,7 +88,7 @@
       </div>
       <div class="relative mx-auto max-w-7xl px-6 lg:px-8 text-center text-white">
         <h1 class="text-4xl font-bold tracking-tight sm:text-5xl">Products</h1>
-        <p class="mt-4 text-xl text-slate-300">High-quality antibodies optimized for Muse cell research</p>
+        <p class="mt-4 text-xl text-slate-300">Muse細胞研究に最適化された高品質抗体</p>
       </div>
     </div>
 
@@ -105,11 +101,10 @@
           <div>
             <div
               class="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-2xl bg-slate-100 shadow-xl border border-slate-200">
-              <img src="images/product_anti_ssea3_vial.png" alt="Anti-SSEA-3 Antibody Vial"
+              <img src="../images/product_anti_ssea3_vial.png" alt="Anti-SSEA-3 Antibody Vial"
                 class="h-full w-full object-cover object-center transition duration-500 hover:scale-105">
             </div>
-            <p class="mt-4 text-center text-xs text-slate-400">* Image is for illustration purposes. Actual package may
-              vary.</p>
+            <p class="mt-4 text-center text-xs text-slate-400">※ 画像はイメージです。実際のパッケージとは異なる場合があります。</p>
           </div>
 
           <!-- Product Info -->
@@ -118,27 +113,26 @@
               <span
                 class="inline-flex items-center rounded-md bg-blue-50 px-2 py-1 text-xs font-medium text-blue-700 ring-1 ring-inset ring-blue-700/10">Research
                 Use Only</span>
+              <p class="mt-2 text-xs text-red-500 font-medium">本製品は研究目的に限定して使用される試薬です。診断・治療・臨床用途には使用できません。</p>
             </div>
             <h2 class="text-3xl font-bold tracking-tight text-slate-900">Anti-SSEA-3 Antibody (Mouse IgM)</h2>
             <div class="mt-3">
-              <p class="text-xl text-slate-900 tracking-tight">For Muse Cell Identification and Isolation <span
+              <p class="text-xl text-slate-900 tracking-tight">Muse細胞 同定・単離用 <span
                   class="text-base font-normal text-slate-500 ml-2">(Clone: YKR04)</span></p>
             </div>
 
             <div class="mt-6">
               <div class="space-y-6 text-base text-slate-600">
                 <p>
-                  This mouse monoclonal antibody (Clone: YKR04) specifically recognizes SSEA-3 (Stage-Specific
-                  Embryonic Antigen-3), a surface marker of Muse cells.
-                  The antibody demonstrates reliable performance in flow cytometry (FACS),
-                  immunostaining (IHC), and magnetic cell separation (MACS).
+                  Muse細胞の表面マーカーであるSSEA-3（Stage-Specific Embryonic Antigen-3）を特異的に認識するMouseモノクローナル抗体（Clone: YKR04）です。
+                  フローサイトメトリー（FACS）、免疫染色（IHC）、磁気細胞分離（MACS）など、多様な実験系で高いパフォーマンスを発揮します。
                 </p>
               </div>
             </div>
 
             <!-- Specs Table -->
             <div class="mt-8 border-t border-slate-200 pt-8">
-              <h3 class="text-sm font-medium text-slate-900 mb-4">Specifications</h3>
+              <h3 class="text-sm font-medium text-slate-900 mb-4">製品仕様</h3>
               <dl class="grid grid-cols-1 gap-x-4 gap-y-4 sm:grid-cols-2">
                 <div class="border-b border-slate-100 pb-2">
                   <dt class="text-xs font-medium text-slate-500">Clone</dt>
@@ -166,21 +160,25 @@
             <div class="mt-10 flex flex-col sm:flex-row gap-4">
               <a href="https://buy.stripe.com/aFaeV66zHdWiaWEc72b7y02" target="_blank" rel="noopener noreferrer"
                 class="flex-1 flex max-w-xs items-center justify-center rounded-md border border-transparent bg-blue-600 px-8 py-4 text-base font-bold text-white shadow-lg hover:bg-blue-700 hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 transition-all transform hover:-translate-y-0.5">
-                Purchase <span class="ml-2 text-xs font-normal opacity-80">(Stripe)</span>
+                購入する <span class="ml-2 text-xs font-normal opacity-80">(Stripe決済)</span>
               </a>
-              <a href="datasheet.pdf" target="_blank" rel="noopener noreferrer"
+              <a href="../datasheet.pdf" target="_blank" rel="noopener noreferrer"
                 class="flex-1 flex max-w-xs items-center justify-center rounded-md border border-slate-300 bg-white px-8 py-4 text-base font-medium text-slate-700 hover:bg-slate-50 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 transition-all">
                 <svg class="mr-2 h-5 w-5 text-slate-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                     d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
                 </svg>
-                Datasheet
+                データシート
               </a>
             </div>
             <p class="mt-4 text-xs text-slate-500">
-              * Credit card payment (Stripe) is available.<br>
-              * For other payment methods or inquiries, please <a href="contact.html"
-                class="underline hover:text-blue-600">Contact Us</a>.
+              ※ クレジットカード決済（Stripe）をご利用いただけます。<br>
+              ※ 公費払い等をご希望の場合は<a href="contact.html" class="underline hover:text-blue-600">お問い合わせ</a>ください。<br>
+              <br>
+              <span class="text-red-500">
+                ※ 本製品は研究用試薬（Research Use Only）です。<br>
+                ※ 診断・治療・臨床用途での使用はできません。
+              </span>
             </p>
           </div>
         </div>
@@ -191,35 +189,26 @@
   <footer class="bg-slate-900 pt-16 pb-8 text-white">
     <div class="mx-auto max-w-7xl px-6 lg:px-8 flex flex-col md:flex-row justify-between gap-12">
       <div class="md:w-1/3">
-        <h3 class="text-xl font-bold mb-4">Alba Medicine LLC</h3>
+        <h3 class="text-xl font-bold mb-4">アルバメディスン合同会社</h3>
         <p class="text-slate-400 text-sm leading-relaxed">
-          Building 5, 6F, 2-1 Seiryo-machi, Aoba-ku,<br>
-          Sendai, Miyagi 980-0872, Japan
+          〒980-0872 宮城県仙台市青葉区星陵町2-1 5号館 6F
         </p>
       </div>
       <div class="md:w-1/3 flex gap-12">
         <div>
           <h4 class="font-semibold mb-4 text-blue-400">Main Menu</h4>
           <ul class="space-y-2 text-slate-300 text-sm">
-            <li><a href="index.html" class="hover:text-white transition">Home</a></li>
-            <li><a href="products.html" class="hover:text-white transition">Products</a></li>
-            <li><a href="about.html" class="hover:text-white transition">About Us</a></li>
-            <li><a href="contact.html" class="hover:text-white transition">Contact</a></li>
-          </ul>
-        </div>
-        <div>
-          <h4 class="font-semibold mb-4 text-blue-400">Products</h4>
-          <ul class="space-y-2 text-slate-300 text-sm">
-            <li><a href="products.html" class="hover:text-white transition">Anti-SSEA-3 Antibody</a></li>
-            <li><a href="datasheet.pdf" target="_blank" rel="noopener noreferrer"
-                class="hover:text-white transition">Datasheet (PDF)</a></li>
+            <li><a href="index.html" class="hover:text-white transition">ホーム</a></li>
+            <li><a href="products.html" class="hover:text-white transition">製品情報</a></li>
+            <li><a href="about.html" class="hover:text-white transition">会社概要</a></li>
+            <li><a href="contact.html" class="hover:text-white transition">お問い合わせ</a></li>
           </ul>
         </div>
       </div>
     </div>
     <div class="mx-auto max-w-7xl px-6 lg:px-8 mt-12 pt-8 border-t border-slate-800 text-center text-xs text-slate-500">
-      <p class="mb-2"><a href="legal.html" class="hover:text-slate-400 underline">Notation based on the Specified
-          Commercial Transactions Act</a></p>
+      <p class="mb-2">本製品は研究用試薬（Research Use Only）であり、診断・治療・臨床用途には使用できません。</p>
+      <p class="mb-2"><a href="legal.html" class="hover:text-slate-400 underline">特定商取引法に基づく表記</a></p>
       <p>&copy; <span id="year"></span> Alba Medicine LLC. All rights reserved.</p>
     </div>
   </footer>
